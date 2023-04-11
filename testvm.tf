@@ -56,6 +56,8 @@ resource "azurerm_virtual_machine" "testing-vm" {
   resource_group_name   = azurerm_resource_group.testing-rg.name
   network_interface_ids = [azurerm_network_interface.testing-nic.id]
   vm_size               = "Standard_D2s_v3"
+  delete_os_disk_on_termination = true
+  delete_data_disks_on_termination = true
   storage_image_reference {
     publisher = "MicrosoftWindowsDesktop"
     offer     = "Windows-10"
