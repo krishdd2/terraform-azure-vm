@@ -1,1 +1,1 @@
-# terraform-azure-vnet
+# terraform-azure-vm
