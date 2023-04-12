@@ -5,7 +5,7 @@ simply set zone = [1] in resource block
 ```
 zone = [1]
 ```
-OR
+# OR
 set it as local and specifr for_each for each vm resource block 
 ex: 
 ```
