@@ -19,3 +19,21 @@ for_each = local.zones
 zone = each.value
 ```
 
+#tags
+set global tags and add addtional tags for each resource if required. 
+
+```
+locals {
+  tags = {
+    environment = "prod"
+    owner = "kk"
+    source = "terraform"
+  }
+}
+```
+and under resource block add tags as below 
+
+tags = merge(local.tags, {
+    workload = "apps"
+  })
+}
